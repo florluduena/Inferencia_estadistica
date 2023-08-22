@@ -12,6 +12,6 @@ Simulate and plot a function g reaches its minimum value when  x = &mu; and it's
 
 6. $Xn ~ N(0,1) \forall n=1,2, \ldots $
 $$
-\overline{x}= sum(X)/n
+`\overline{x}` = sum(X)/n
 $$
  Plot $\overline{n}$ as function of n, from 1 to 1000. 
