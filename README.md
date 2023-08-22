@@ -17,7 +17,13 @@ Simulate and plot a function g reaches its minimum value when  x = &mu; and it's
  7.  Let $X_1, \ldots , X_n ∼ Unif(0, 1)$ .
    Plot density $f_x$.
    Calculate $E(X_n)$ and $V(X_n)$. Graph both quantities as functions of n.
-
-8. Simulate the distribution of $X_n$ with R for $n = 1, 5, 25, 100$. 
+   Simulate the distribution of $X_n$ with R for $n = 1, 5, 25, 100$. 
  Verify that the simulated values of $E(X_n)$ and $V(X_n)$ are consistent with the theoretical values found in the previous section. 
- What happens to the (sample) distribution of $X_n$ as n increases?"
+ What happens to the (sample) distribution of $X_n$ as n increases?
+
+8.  A deck of n cards labeled from 1 to n is shuffled. 
+ If the position of a card after shuffling matches the card's label,
+ we say there's a coincidence.
+ Let $X$ be the total number of coincidences 
+
+
