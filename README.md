@@ -10,8 +10,7 @@ Simulate and plot a function g reaches its minimum value when  x = &mu; and it's
  Let X be the person's winnings. This problem is known as the St. Petersburg paradox.
  Simulate to show that the expected profit is infinit.
 
-6. $Xn ~ N(0,1) \forall n=1,2, \ldots $
-$$
-`\overline{x}` = sum(X)/n
-$$
- Plot $\overline{n}$ as function of n, from 1 to 1000. 
+6. $Xn ~ N(0,1) \forall n=1,2, \ldots $ \\ 
+<span style="text-decoration:overline">x</span> =  $ sum(X)/n $
+
+ Plot $<span style="text-decoration:overline">x</span>  as function of n, from 1 to 1000. 
