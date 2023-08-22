@@ -11,6 +11,6 @@ Simulate and plot a function g reaches its minimum value when  x = &mu; and it's
  Simulate to show that the expected profit is infinit.
 
 6. $ Xn ~ N(0,1) \forall n=1,2, \ldots $  
-<span style="text-decoration:overline">x</span> =  $ sum(X)/n $
+   $ \bar{X} =   sum(X)/n $
 
- Plot <span style="text-decoration:overline">x</span>  as function of n, from 1 to 1000. 
+ Plot $\bar{X}$  as function of n, from 1 to 1000. 
