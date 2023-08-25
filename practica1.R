@@ -202,6 +202,40 @@ coincidencias <- function(cant_cartas){
   }
 
 
+#### EJERCICIO 6: 
+# 
+# 
+# 
+poisson <- function(num, parametro){
+# Objetive:
+#   It calculates likelihoods of a Poisson distribution for simulated samples and verify that the obtained estimator effectively maximizes them.
+# Parameters:
+#   num: int
+#     number of sample
+#   parametro: float
+#     Parameter, lambda, of poisson distribution. It represents the average number of expected events per unit of time or spaces
+#   returns:
+#      It shows a plot and a text with the comparison of the simulation and a build up function in relation to optimize
+        par <- seq(parametro/2,2*parametro, length=num )
+        v <- c()
+        funcion_a_maximizar <-function(x){
+          for(i in 1:num){v[i] <-sum(x)*log(par[i])- par[i]*num}
+            return(v)
+        }
+        
+        f <- function(p){
+          sum(x)*log(p)- p*num
+        }
+          
+          v <- funcion_a_maximizar(x)
+         
+         
+          plot(par, v,type = "l", col="cornflowerblue", lwd=1.5,ylab="", xlab ="lambda", main="Simulation of maximun likelihood \n of lambda of a Poisson distribution")
+          abline(v=optimize(f, c(1,10),maximum = TRUE)$maximum, lwd =3,col= "dodgerblue3")
+          
+          cat("The estimator of maximun likelihood is ", mean(x), " and the results of 'optimize' is", print(optimize(f, c(1,10),maximum = TRUE)$maximum))
+        }
+   poisson(100,5)
 
 
 
