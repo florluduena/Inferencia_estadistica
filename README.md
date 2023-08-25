@@ -26,4 +26,5 @@ Simulate and plot a function g reaches its minimum value when  x = &mu; and it's
  we say there's a coincidence.
  Let $X$ be the total number of coincidences 
 
+6. Plot the calculated likelihoods of a Poisson distribution for samples generated with R and verify that the obtained estimator effectively maximizes them.
 
