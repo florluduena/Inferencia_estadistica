@@ -3,15 +3,14 @@
 
 library(ggplot2)
 
-#### PRACTICA 1
-# PUNTO 3
+# Punto 1
 # Build a simulation of a distribution with a knowed expected value that: 
 # Given a random variable Y with a expected value \mu, consider the function g(x) = E((Y - x)^2)
 # Show that the function g reaches its minimum value when  x = \mu and it's minimum is  V(Y)
 
 # Y follows a Bernoulli distribution with parameters p = 0.5 ( which is a binomial distribution with n = 1) 
 
-punto3 <- function(x, proba){
+punto1 <- function(x, proba){
   # ------ Function proba3 -------
   # Objetive: 
   #   It replicates an empirical E((Y - x)^2) by
@@ -37,7 +36,7 @@ punto3 <- function(x, proba){
   }
  
 # Dataframe based on the function punto3. x is a numeric vector with a sequence from 0 to 1 by 0.001.
-df <- data.frame(xvalue = seq(0, 1, 0.001), gvalues = punto3(seq(0, 1, 0.001), 0.5))
+df <- data.frame(xvalue = seq(0, 1, 0.001), gvalues = punto1(seq(0, 1, 0.001), 0.5))
 
 # Plot
 ggplot(df, aes(x = xvalue, y = gvalues)) + geom_line(colour = "plum")+ geom_vline(aes(xintercept = 0.5), color = "plum", linetype = "dashed", size = 1)+
@@ -55,7 +54,7 @@ min(df$gvalues)
 
 
 
-# EJERCICIO 4: The St. Petersburg paradox 
+# EJERCICIO 2: The St. Petersburg paradox 
 # A person flips a fair coin, independently, until heads appear for the first time.
 # If heads appears on the n-th toss, the person wins 2n pesos.
 # Let X be the person's winnings. This problem is known as the St. Petersburg paradox.
@@ -72,7 +71,7 @@ View(Esperanza)
 sum(Esperanza, na.rm=TRUE)
 
 
-# EJERCICIO 6 : Xn ~ N(0,1) for all n=1,2,..
+# EJERCICIO 3 : Xn ~ N(0,1) for all n=1,2,..
 # \overline{x}= sum(X)/n
 # Plot \overline{n} as function of n, from 1 to 1000. 
 
@@ -122,7 +121,7 @@ for (i in 1:4){
 cat("After many iteration we can observed that every graph is different")
 cat("This is in line with the Cauchy distribution and its heavy tails. Extreme values are more frequent in this distribution, and they can heavily impact the mean due to the sensitivity to these extreme values.")
 
-### EJERCICIO 7: 
+### EJERCICIO 4: 
 # Let X1, . . . , Xn ∼ Unif(0, 1).
 # Plot density fx.
 par(mfrow = c(1, 1))
@@ -179,7 +178,7 @@ eyv <- function(n){
 eyv(c(1, 5, 25, 100))
 
 
-###### EJERCICIO 8:
+###### EJERCICIO 5:
 # A deck of n cards labeled from 1 to n is shuffled. 
 # If the position of a card after shuffling matches the card's label,
 # we say there's a coincidence.
